@@ -1,0 +1,54 @@
+<div class="row"  style="margin-top:5%">
+  <div class="col-md-offset-1 col-md-10">
+
+    <div class="form-group row">
+      <label class="col-md-2">Course_id</label>
+      <div class="col-md-10">
+        <input class="form-control form-border" type="text" name="name" value="" [(ngModel)]="newId">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-md-2">Course</label>
+      <div class="col-md-10">
+        <input class="form-control form-border" type="text" name="email" value="" [(ngModel)]="newCourse">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-md-2">Teacher</label>
+      <div class="col-md-10">
+        <input class="form-control form-border " type="text" name="address" value="" [(ngModel)]="newTeacher">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-md-2">
+      </label>
+      <div class="col-md-10">
+        <button class="btn btn-success" (click)="addcourse()">Add Course</button>
+
+
+
+
+
+
+
+<!-- COURSE LIST -->
+  <div class="row" style="margin:5%">
+    <div class="col-md-12">
+      <table class="table table-bordered table-striped  table1" >
+        <tr>
+          <th>CourseID</th>
+          <th>Course</th>
+          <th>Teacher</th>
+        </tr>
+        <tr *ngFor="let c of CourseService.courselist; let i of index"  >
+          <td>{{c.id}}</td>
+          <td>{{c.course}}</td>
+          <td>{{c.teacher}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
